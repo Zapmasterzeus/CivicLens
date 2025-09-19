@@ -32,7 +32,9 @@ router.post('/', async (req, res) => {
 // GET: Retrieve completed complaints
 router.get('/', async (req, res) => {
   try {
-    const completed = await Completed.find();
+    const { by } = req.query; // Filter by government employee
+    const query = by ? { by } : {};
+    const completed = await Completed.find(query);
     res.json(completed);
   } catch (error) {
     res.status(500).json({ message: error.message });

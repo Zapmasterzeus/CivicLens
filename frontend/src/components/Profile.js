@@ -25,7 +25,7 @@ const Profile = ({ user, onComplete, onLogout }) => {
     }
     setError('');
     try {
-      await window.axios.patch(`http://localhost:5000/api/users/${user.username}`, form);
+      await window.axios.patch('http://localhost:5000/api/users/${user.username}', form);
       onComplete(form);
     } catch (err) {
       setError('Failed to save profile');

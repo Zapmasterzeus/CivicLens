@@ -17,6 +17,43 @@
   color: #1976d2;
   letter-spacing: 1px;
 }
+
+/* Tab Navigation Styles */
+.tab-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  gap: 8px;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  border: 2px solid #1976d2;
+  background: #fff;
+  color: #1976d2;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.tab-button:hover {
+  background: #f3f7fb;
+  transform: translateY(-1px);
+}
+
+.tab-button.active {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.tab-button.active:hover {
+  background: #1565c0;
+  transform: translateY(-1px);
+}
 .dashboard-content {
   display: flex;
   flex-wrap: wrap;
@@ -86,4 +123,23 @@
   border-radius: 6px;
   padding: 8px 12px;
   border-left: 4px solid #d32f2f;
+}
+
+/* Completed task item styles */
+.completed-item {
+  border-left: 6px solid #4caf50 !important;
+  background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%) !important;
+}
+
+.completed-item:hover {
+  box-shadow: 0 6px 24px rgba(76, 175, 80, 0.14), 0 2px 8px rgba(0,0,0,0.06) !important;
+}
+
+/* Map section headers */
+.dashboard-map h3 {
+  margin: 0 0 12px 0;
+  color: #1976d2;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
 }
